@@ -1,10 +1,10 @@
 import sqlite3
 
-# connect to database
+
 conn = sqlite3.connect('employee.db')
 c = conn.cursor()
 
-# create table
+
 c.execute("""CREATE TABLE IF NOT EXISTS employee (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             name TEXT,
@@ -73,7 +73,7 @@ def delete_emp():
     conn.commit()
     print("Deleted!")
 
-# main menu
+
 while True:
     print("\n--- Employee Database ---")
     print("1. Add Employee")
